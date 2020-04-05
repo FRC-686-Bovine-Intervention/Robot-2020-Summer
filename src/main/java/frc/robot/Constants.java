@@ -30,13 +30,6 @@ public class Constants
     // update the spreadsheet!
     //=========================================================================
 
-    //-------------------------------------------
-    // CAN Bus
-    //-------------------------------------------
-    // Use the roboRIO's Web-based Configuration page to make these Device IDs match
-    // Using USB to connect to roboRIO: http://172.22.11.2
-    // Using Ethernet to connect to roboRIO: http://10.6.86.2 (after static IP has been set using USB connection)
-
     // Motor Controllers
     public static int kLeftMotorMasterDeviceId =   1;
     public static int kLeftMotorSlave1DeviceId =   2;
@@ -44,58 +37,6 @@ public class Constants
     public static int kRightMotorMasterDeviceId =  4;
     public static int kRightMotorSlave1DeviceId =  5;
     public static int kRightMotorSlave2DeviceId =  6;
-    public static int kExampleMasterDeviceId =    88;
-    public static int kExampleSlaveDeviceId =     99;
-
-    //-------------------------------------------
-    // PWM Ports
-    //-------------------------------------------
-    // Plug the PWM/servo cable from the following devices into the indicated PWM ports on the roboRIO
-
-    public static int kExample1PwmPort = 1;
-    public static int kExample2PwmPort = 2;
-    public static int kExample3PwmPort = 3;
-    public static int kExampleSubsystemLimitSwitchPwmId = 99;
-
-    //-------------------------------------------
-    // Pneumatics Control Module (PCM) Channels
-    //-------------------------------------------
-    // Plug the PWM/servo cable from the following devices into the indicated PWM ports on the roboRIO
-    // if we use more than 8 channels, we'll need a second PCM, and will need to add a PCM module ID to this list
-
-    // Solenoids
-    public static final int kExample1ForwardChannel = 0;
-    public static final int kExample1ReverseChannel = 1;
-    public static final int kExample2ForwardChannel = 2;
-    public static final int kExample2ReverseChannel = 3;
-    public static final int kExample3ForwardChannel = 4;
-    public static final int kExample3ReverseChannel = 5;
-
-    // End Port/Channel Numbers
-    
-
-
-    //=========================================================================
-    // Joystick Controls
-    //=========================================================================
-
-    public static int kXboxButtonA = 1;
-    public static int kXboxButtonB = 2;
-    public static int kXboxButtonX = 3;
-    public static int kXboxButtonY = 4;
-    public static int kXboxButtonLB = 5;
-    public static int kXboxButtonRB = 6;
-
-    public static int kXboxLStickXAxis = 0;
-    public static int kXboxLStickYAxis = 1;
-    public static int kXboxLTriggerAxis = 2;
-    public static int kXboxRTriggerAxis = 3;
-    public static int kXboxRStickXAxis = 4;
-    public static int kXboxRStickYAxis = 5;
-
-    public static int kIntakeButton = kXboxButtonRB;
-    public static int kOuttakeButton = kXboxButtonLB;
-    public static int kQuickTurnButton = kXboxButtonX;
 
 
     //=========================================================================
@@ -107,6 +48,7 @@ public class Constants
     public static final int kCANTimeoutMs = 10;         // ms, use for on the fly updates
     public static final int kLongCANTimeoutMs = 100;    // ms, use for constructors
     public static double kTalonFramePeriod = 0.1;       // sec
+    public static int kTalonTimeoutMs = 5; // ms
 
 
     public static int kTalonPidIdx = 0; // 0 for primary closed-loop PIDs, 1 for auxiliary closed-loop PIDs
@@ -144,8 +86,8 @@ public class Constants
      public static int kDriveTrainCurrentLimit = 25;
 
     // Gyro selection 
-    public enum GyroSelectionEnum { BNO055, NAVX; }
-    public static GyroSelectionEnum GyroSelection = GyroSelectionEnum.BNO055;
+    public enum GyroSelectionEnum { BNO055, NAVX, PIGEON; }
+    public static GyroSelectionEnum GyroSelection = GyroSelectionEnum.PIGEON;
 
 
     //=========================================================================

@@ -1,4 +1,4 @@
-package frc.robot.auto.modes;
+package frc.robot.auto;
 
 import frc.robot.Constants;
 import frc.robot.lib.util.Pose;

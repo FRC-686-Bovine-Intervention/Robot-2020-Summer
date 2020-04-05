@@ -1,8 +1,8 @@
 package frc.robot.auto.modes;
 
+import frc.robot.SmartDashboardInteractions;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeEndedException;
-import frc.robot.auto.AutoModeSelector;
 import frc.robot.auto.actions.WaitAction;
 
 /**
@@ -16,7 +16,7 @@ public class StandStillMode extends AutoModeBase
     protected void routine() throws AutoModeEndedException
     {
         System.out.print("Starting Stand Still Mode...");
-        runAction(new WaitAction(AutoModeSelector.getInstance().getStartDelay()));
+        runAction(new WaitAction(SmartDashboardInteractions.getInstance().getStartDelay()));
         System.out.println("Done!");
     }
 }

@@ -1,8 +1,8 @@
 package frc.robot.auto.modes;
 
+import frc.robot.SmartDashboardInteractions;
 import frc.robot.auto.AutoModeBase;
 import frc.robot.auto.AutoModeEndedException;
-import frc.robot.auto.AutoModeSelector;
 import frc.robot.auto.actions.PathFollowerAction;
 import frc.robot.auto.actions.WaitAction;
 import frc.robot.lib.util.Path;
@@ -54,7 +54,7 @@ public class SquarePatternMode extends AutoModeBase
         // revPath.setReverseOrder();
         // revPath.setReverseDirection();
 
-        runAction(new WaitAction(AutoModeSelector.getInstance().getStartDelay()));
+        runAction(new WaitAction(SmartDashboardInteractions.getInstance().getStartDelay()));
         runAction(new PathFollowerAction(path)); // drive forward
         // runAction(new PathFollowerWithVisionAction(revPath)); // drive reversed
     }
